@@ -14,8 +14,8 @@ public class TodoDTO {
 	private boolean done;
 
 	
-	//TodoEntity ¿¡¼­ TodoDTO ·Î º¯È¯ÇÏ´Â°Å
-	//ÀÚ·á°¡ ¼öÁ¤µÇ¸é ¾ÈµÇ´Ï±î final
+	//TodoEntity ì—ì„œ TodoDTO ë¡œ ë³€í™˜í•˜ëŠ”ê±°
+	//ìë£Œê°€ ìˆ˜ì •ë˜ë©´ ì•ˆë˜ë‹ˆê¹Œ final
 	public TodoDTO(final TodoEntity entity) {
 		this.id = entity.getId();
 		this.title = entity.getTitle();
