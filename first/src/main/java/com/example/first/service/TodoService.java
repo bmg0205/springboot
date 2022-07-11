@@ -39,7 +39,7 @@ public class TodoService {
 		repository.save(entity); 
 		log.info("Entity Id : {} is saved.");
 		// 저장된 엔티티를 포함하는 새 리스트를 리턴한다.
-		return repository.findbyUserId(entity.getUserId());
+		return repository.findByUserId(entity.getUserId());
 	}
 	
 	//리펙토링한 메소드
@@ -54,4 +54,11 @@ public class TodoService {
 			throw new RuntimeException("Unkown user.");
 		}
 	}
+	
+	//output userId에 어느 한 유저가 리스트를 뽑는다.(temporary-user)
+	public List<TodoEntity> output(final String userId) {
+		return repository.findByUserId(userId);
+	}
+	
+	
 }

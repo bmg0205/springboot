@@ -17,8 +17,8 @@ public interface TodoRepository extends JpaRepository<TodoEntity, String> {
    // 원래는 자동으로 JPA가 메서드 이름을 파싱해서 만들어줌. 복잡한 쿼리는 @Query를 이용해 지정할 수 있다.
    // 메서드이름은 쿼리, 매개변수는 쿼리에 Where에 들어갈 값을 의미 
    // ?1은 매서드의 매개변수의 순서 위치다.
-   @Query("select * from Todo t where t.userId = ?1")
-   List<TodoEntity> findbyUserId(String userId);
+   //@Query("select * from Todo t where t.userId = ?1")
+   List<TodoEntity> findByUserId(String userId);
    
 }
 // 메서드 이름 작성 방법과 예제는 다음 공식 사이트의 래퍼런스를 통해 확인할 수 있다.
